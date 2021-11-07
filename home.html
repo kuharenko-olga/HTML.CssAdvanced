@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-wrapper">
+            <div class="logo">
+                <object data="img/Logo.svg"></object>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Галерея</a></li>
+                    <li><a href="#">Проекты</a></li>
+                    <li><a href="#">Сертификаты</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="info">
+                <div class="titles">
+                    <h1 class="title">Project</h1>
+                    <h2 class="subtitle">Home</h2>
+                </div>
+                <div class="buttons-group">
+                    <div class="buttons">
+                        <div class="arrows">
+                            <img class="arrow" src="img/ico-shape2.svg" alt="image">
+                        </div>
+                        <div class="arrows">
+                            <img class="arrow" src="img/ico-shape.svg" alt="image">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-numbers">
+                    <div class="slide">01</div>
+                    <div class="line"></div>
+                    <div class="slide">02</div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="image">
+                    <img src="img/Rectangle%206.png" alt="image">
+                </div>
+                <button class="button">Взглянуть
+                    <img src="img/ico-shape.svg" alt="image">
+                </button>
+            </div>
+        </div>
+    </main>
+
+
+    <section class="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <div class="item">
+                        <img src="img/Rectangle%208.png" alt="image">
+                    </div>
+                    <div class="item">
+                        <img src="img/Rectangle%2010.png" alt="image">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="item top">
+                        <img src="img/Rectangle%209.png" alt="image">
+                    </div>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="column">
+                        <div class="item">
+                            <h2 class="main-title">О компании</h2>
+                        </div>
+                        <div class="item">
+                            <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        </div>
+                        <div class="item">
+                            <button class="button read">Читать
+                                <img src="img/ico-shape.svg" alt="image">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+
+    <section class="main-tasks">
+            <h2 class="main-title">Основные задачи</h2>
+            <div class="tasks-container">
+                <div class="row">
+                    <div class="item">
+                        <div class="task-number">1</div>
+                    </div>
+                    <div class="item">
+                        <p class="task-description">Создание комфортных условий и повышение качества
+                            обслуживания
+                            клиентов</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item">
+                        <div class="task-number">2</div>
+                    </div>
+                    <div class="item">
+                        <p class="text">Постоянно совершенствовать качество предоставляемых услуг
+                            путем обучения персонала, закупки нового оборудования
+                            и усиленной рекламы на рынке</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <section class="contacts">
+        <h2 class="main-title">Связаться с нами</h2>
+        <div class="contacts-wrapper">
+            <div class="column">
+                <form id="form" action="#">
+                    <div>
+                        <input type="text" placeholder="Имя" class="placeholder field" name="name">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Номер телефона*" class="placeholder field" name="phone">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="E-mail*" class="placeholder field" name="email">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Интересующий товар/услуга" class="placeholder field" name="product">
+                    </div>
+                    <div class="custom">
+                        <textarea id="message" placeholder="Cообщение*" class="placeholder field message-field" name="message"></textarea>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input id="policy-checkbox" type="checkbox" name="policy" checked>
+                        <label for="policy-checkbox" class="rule-user">Отправляя заявку Вы соглашаетесь с политикой конфиденциальности</label>
+                    </div>
+
+                    <div id="messages-user"></div>
+
+                    <button class="button">Отправить
+                        <img src="img/ico-shape3.svg" alt="image">
+                    </button>
+
+
+                </form>
+            </div>
+            <div class="column">
+                <div id="map"></div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-info">
+            <div class="logo">
+                <object data="img/Footer-logo.svg"></object>
+            </div>
+            <div class="info">
+                <h3 class="info-title">Информация</h3>
+                <ul class="list">
+                    <li class="contact"><a href="#">Главная</a></li>
+                    <li class="contact"><a href="#">Галерея</a></li>
+                    <li class="contact"><a href="#">Проекты</a></li>
+                    <li class="contact"><a href="#">Сертификаты</a></li>
+                    <li class="contact"><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="info">
+                <h3 class="info-title">Контакты</h3>
+                <ul class="list">
+                    <li class="contact">
+                        <a href=""><i class="fas fa-map-marker-alt"></i></a>
+                        100000, Республика Казахстан, <br>г. Караганда, ул. Телевизионная 10
+                    </li>
+                    <li class="contact">
+                        <a href=""><i class="fas fa-phone"></i></a>
+                        +38 (000) 000 00 00
+                    </li>
+                    <li class="contact">
+                        <a href=""><i class="far fa-envelope"></i></a>
+                        mail@gmail.com
+                    </li>
+                </ul>
+            </div>
+            <div class="info">
+                <h3 class="info-title">Социальные сети</h3>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-invision"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</footer>
+<div class="copyright">
+    © 2019 Digital Project. Все права защищены.
+</div>
+
+
+<script>
+    // initialize map
+    let center = [51.505, -0.04];
+    let map = L.map('map').setView(center, 20);
+    L.tileLayer(
+        'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18
+        }).addTo(map);
+    L.marker(center).addTo(map);
+
+    // form submit
+    window.onload = function (){
+        let form = document.getElementById('form');
+        let messagesUser = form.querySelector('#messages-user');
+
+        const required_fields = ['phone', 'email', 'message']
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            let formHasErrors = false;
+            required_fields.forEach(field => {
+                let elem = document.getElementsByName(field)[0];
+                console.log(elem)
+                if (!elem.value) {
+                    console.log(field)
+                    formHasErrors = true;
+                    elem.classList.add('error');
+                }
+            })
+
+            if (formHasErrors) {
+                messagesUser.innerText = 'Поля обязательны для заполнения';
+                return;
+            }
+        })
+    }
+</script>
+</body>
+</html>

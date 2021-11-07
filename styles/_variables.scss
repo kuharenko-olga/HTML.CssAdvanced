@@ -1,0 +1,20 @@
+$secondary-color: #333333;
+$font-size: 12px;
+$base-font-size:64px;
+$primary-color:#BDBDBD;
+$base-color:#FFF;
+
+@font-face {
+  font-family: "TT Hoves";
+  src: url('../font/TTHoves-Light.ttf');
+}
+
+@font-face {
+  font-family: "TT Hoves bold";
+  src: url('../font/TTHoves-Bold.ttf');
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url('../font2/SFProDisplay-Black.ttf');
+}

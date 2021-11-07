@@ -1,0 +1,58 @@
+@mixin flexible($direction: row, $justify: unset, $align:unset) {
+  display: flex;
+  justify-content: $justify;
+  flex-direction: $direction;
+  align-items: $align;
+}
+
+@mixin reset() {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin reset_list-style() {
+  list-style: none;
+}
+
+@mixin styles_links() {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@mixin links_hover($color:unset) {
+  border-top: 1px solid $color;
+  border-bottom: 1px solid $color;
+  transition: linear 0.3s;
+}
+
+@mixin arrows() {
+  width: 53px;
+  height: 53px;
+  border: 1px solid #F2F2F2;
+}
+
+@mixin titles() {
+  font-weight: 300;
+  font-size: $base-font-size;
+  color: $primary-color;
+}
+
+@mixin tasks-description($width:unset) {
+  @include reset();
+  font-size: 22px;
+  line-height: 35px;
+  width: $width;
+}
+
+@mixin button($color:$base-color,$background:$base-color) {
+  width: 222px;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: $background;
+  padding: 27px 0px;
+  margin-top: 22px;
+  color: $color;
+  letter-spacing: 0.2em;
+  border: none;
+  cursor:pointer;
+}
